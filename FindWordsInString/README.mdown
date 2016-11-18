@@ -1,0 +1,21 @@
+# Finding words within a string of words.
+
+Someone removed all the spaces in a sentence and you want to find out what the individual words in the sentence were. Try this Python program!
+
+For example, given "THEHOUSEISBLUE", the program returns "THE HOUSE IS BLUE". Other examples: "cubsfinallywintheworldseries" returns "cubs finally win the world series".
+Note that this program works fine for most strings, but there are still some tricky cases that the program has a hard time with. For example, given "ANEWHOUSEWASBUILT", the program returns "ANEW HOUSE WAS BUILT" instead of the usually prefered option "A NEW HOUSE WAS BUILT". I have a few ideas in mind for how to improve this, but have not gotten to test them yet:
+
+- I am currently not finding all of the possible words because I didn't want to iterate over the whole string multiple times. I will need to change that for "ANEWHOUSEWASBUILT"
+- Once more word options have been identified, I plan to check how many documents a Google search for the found word combination returns. The word combination with the most documents wins. 
+
+
+The directory contains two files:
+
+- FindWordsInString.py
+- TestFindWordsInString.py
+
+FindWordsInString.py can be called via the command line. It takes the following arguments:
+ - a string of words without spaces
+ - "True" or "False" as optional parameter indicating whether or not you want to use the average frequency of detected words to determine which option of words (the program tries to find different ways to split the string into words) are more likely. Default is "False".
+
+TestFindWordsInString.py can be run via the command line as well and tests if the program is producing correct/expected results. One test will also fail, because of the described above problem with strings like "ANEWHOUSEWASBUILT". 
